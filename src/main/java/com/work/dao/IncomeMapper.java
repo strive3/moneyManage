@@ -43,4 +43,6 @@ public interface IncomeMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Income record);
+
+    Income selectByUid(Integer uid);
 }

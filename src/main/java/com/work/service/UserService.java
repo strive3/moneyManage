@@ -6,6 +6,7 @@ import com.work.pojo.User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @author 杜晓鹏
@@ -27,4 +28,7 @@ public interface UserService {
     User selectById(Integer id);
 
     ServerResponse checkUsername(String username);
+
+
+    List<User> findAll();
 }

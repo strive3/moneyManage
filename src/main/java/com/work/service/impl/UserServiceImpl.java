@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @author 杜晓鹏
@@ -39,9 +40,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ServerResponse register(User user) {
+        if (user.getUsername()== null || user.getUsername().equals(""))
+            return ServerResponse.serverResponseError("用户名不能为空");
+
+        if (user.getPassword()== null || user.getPassword().equals(""))
+            return ServerResponse.serverResponseError("密码不能为空");
+
         User user1 = userMapper.checkUsername(user.getUsername());
         if (user1 != null)
             return ServerResponse.serverResponseError("用户名已存在");
+
         int insert = userMapper.insert(user);
         if (insert == 1)
             return ServerResponse.serverResponseSuccess();
@@ -70,6 +78,17 @@ public class UserServiceImpl implements UserService {
         if (user == null)
             return ServerResponse.serverResponseSuccess();
         return ServerResponse.serverResponseError("用户名已存在");
+    }
+
+    /**
+     * 查找所有的学生
+     * @return
+     */
+    @Override
+    public List<User> findAll() {
+        List<User> users = userMapper.selectAll();
+
+        return users;
     }
 
 

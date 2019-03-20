@@ -43,4 +43,7 @@ public interface CostMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Cost record);
+
+    Cost selectByUid(Integer uid);
+
 }

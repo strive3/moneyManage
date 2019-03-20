@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -51,7 +50,6 @@ System.out.println("code1:"+verifyCode);
         //生成图片
         int w = 100, h = 30;
         VerifyCodeUtils.outputImage(w, h, response.getOutputStream(), verifyCode);
-
     }
 
     /*
@@ -109,7 +107,7 @@ System.out.println("code用户:"+code);
 
     @RequestMapping("/check.do")
     @ResponseBody
-    public ServerResponse check(String username) {
+    public ServerResponse check( String username) {
         System.out.println("---------------------------");
         return userService.checkUsername(username);
     }
