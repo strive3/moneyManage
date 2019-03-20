@@ -1,0 +1,19 @@
+
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap-responsive.css" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/styles.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/toastr.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/fullcalendar.css" />
+<script src="${pageContext.request.contextPath }/js/jquery-1.7.2.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery.knob.js"></script>
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+<script src="${pageContext.request.contextPath }/js/jquery.sparkline.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/toastr.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery.tablesorter.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery.peity.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/fullcalendar.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/gcal.js"></script>
+<script src="${pageContext.request.contextPath }/js/setup.js"></script>
